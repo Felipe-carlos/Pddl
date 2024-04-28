@@ -3,7 +3,7 @@
 
 (:types elevator passager status) ;(:types elevador kind crew)
 
-(:constants p1 p2 p3 - passager)  ;mis can - kind
+; (:constants p1 p2 p3 - passager)  ;mis can - kind acho que nao precisa definimos no problema como objetos
 
 (:predicates
        (passager_status ?p - passager ?s - status)  
@@ -17,6 +17,7 @@
        (target_pass ?p - passager)          ;target floor
        (max_pas_elevador)                   ;para comparar
        (highest_floor)                      ;para comparar
+       (num_moves)                             ;para mimizar
        - number
 )       
 ;  functions  (crew_vl ?c - crew)           ; maps one -> 1; two -> 2; none -> 0
@@ -24,6 +25,12 @@
 ;        (total-cost)
 ;        - number
 ; )
+
+ (:action up
+    :parameters (?e - elevator )
+    :precondition (<= (elevator_at ?e) (highest_floor))
+    :effect (and )
+  )
 
 (:action move
   :parameters   (?cm ?cc - crew ?f ?t - side)
