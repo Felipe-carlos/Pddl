@@ -21,7 +21,7 @@
           (= (target_pass p2) 7)
           (= (target_pass p3) 10)
           
-          (= (max_pas_elevador) 3)
+          (= (max_pas_elevador) 1)
           (= (highest_floor) 50)
           (= (num_p_inside) 0)
 
@@ -37,26 +37,4 @@
    )
    (:metric minimize (num_moves))
 )
-
-
-;    (:init ( = (elevator_at elevator_1) 1)
-;           (= (crew_vl none) 0)
-;           (= (crew_vl one) 1)
-;           (= (crew_vl two) 2)
-
-;           (= (pop_at mis left)  3)
-;           (= (pop_at can left)  3)
-;           (= (pop_at mis right) 0)
-;           (= (pop_at can right) 0)
-
-;           (= (total-cost) 0)
-;    )
-;    (:goal (and (= (pop_at mis left)  0)
-;                (= (pop_at can left)  0)
-;                (= (pop_at mis right) 3)
-;                (= (pop_at can right) 3)
-;           )
-;    )
-;    (:metric minimize (total-cost))
-; )
 
