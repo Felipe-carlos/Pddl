@@ -16,9 +16,9 @@
 
 
 
-;           (not (satisfeito p1))
-;           (not (satisfeito p2))
-;           (not (satisfeito p3))
+;           (not (satisfied p1))
+;           (not (satisfied p2))
+;           (not (satisfied p3))
 
 ;           (= (target_pass p1) 1)
 ;           (= (target_pass p2) 7)
@@ -30,9 +30,9 @@
 
 ;           (= (num_moves) 0)
 ;    )
-;    (:goal (and (satisfeito p1)
-;                (satisfeito p2)
-;                (satisfeito p3)
+;    (:goal (and (satisfied p1)
+;                (satisfied p2)
+;                (satisfied p3)
 
 ;           )
 ;    )
@@ -51,7 +51,7 @@
 
 ;           (not (inside_elevator p1))
  
-;           (not (satisfeito p1))
+;           (not (satisfied p1))
 
 ;           (= (target_pass p1) 1)
           
@@ -61,7 +61,7 @@
 
 ;           (= (num_moves) 0)
 ;    )
-;    (:goal (and (satisfeito p1)
+;    (:goal (and (satisfied p1)
 
 ;           )
 ;    )
@@ -99,16 +99,16 @@
           (not (inside_elevator p10))
 
 
-          (not (satisfeito p1))
-          (not (satisfeito p2))
-          (not (satisfeito p3))
-          (not (satisfeito p4))
-          (not (satisfeito p5))
-          (not (satisfeito p6))
-          (not (satisfeito p7))
-          (not (satisfeito p8))
-          (not (satisfeito p9))
-          (not (satisfeito p10))
+          (not (satisfied p1))
+          (not (satisfied p2))
+          (not (satisfied p3))
+          (not (satisfied p4))
+          (not (satisfied p5))
+          (not (satisfied p6))
+          (not (satisfied p7))
+          (not (satisfied p8))
+          (not (satisfied p9))
+          (not (satisfied p10))
           
           
 
@@ -130,16 +130,16 @@
 
           (= (num_moves) 0)
    )
-   (:goal (and (satisfeito p1)
-               (satisfeito p2)
-               (satisfeito p3)
-               (satisfeito p4)
-               (satisfeito p5)
-               (satisfeito p6)
-               (satisfeito p7)
-               (satisfeito p8)
-               (satisfeito p9)
-               (satisfeito p10)
+   (:goal (and (satisfied p1)
+               (satisfied p2)
+               (satisfied p3)
+               (satisfied p4)
+               (satisfied p5)
+               (satisfied p6)
+               (satisfied p7)
+               (satisfied p8)
+               (satisfied p9)
+               (satisfied p10)
                
           )
    )

@@ -1,31 +1,31 @@
 (define (domain elev)
 (:requirements :strips :typing :fluents :equality :action-costs :disjunctive-preconditions :conditional-effects)
 
-(:types elevator passager ) ;(:types elevador kind crew)
+(:types elevator passager ) 
 
 
 (:predicates
        (inside_elevator ?p - passager)
-       (satisfeito ?p - passager)  
+       (satisfied ?p - passager)  
        
 )
 
 (:functions
-       (elevator_at ?e - elevator)           ; maps one -> 1; two -> 2; none -> 0
+       (elevator_at ?e - elevator)    
        (passager_at ?p - passager)
        
        (target_pass ?p - passager)          ;target floor
        (max_pas_elevador)                   ;para comparar
        (highest_floor)                      ;para comparar
-       (num_p_inside)                    ;numero de pessoas no elevador
-       (num_moves)                             ;para mimizar
+       (num_p_inside)                 ;numero de pessoas no elevador
+       (num_moves)                           ;para mimizar
        - number
 )       
 
 (:action up
-    :parameters (?e - elevator )        ;talvez como parametro receber os targets
-    :precondition (and (<= (elevator_at ?e) (highest_floor))   ;tem que verificar se existe um target acima ou abaixo na posição do elevador?
-    
+    :parameters (?e - elevator )        
+    :precondition (and (<= (elevator_at ?e) (highest_floor))    
+
     )
     :effect (and (increase (elevator_at ?e) 1)
                 (increase (num_moves) 1)
@@ -61,7 +61,7 @@
     )
     :effect (and  (not (inside_elevator ?p))
                   (decrease (num_p_inside) 1)
-                  (satisfeito ?p)
+                  (satisfied ?p)
                   
          
   ))
